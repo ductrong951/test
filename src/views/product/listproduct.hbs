@@ -6,7 +6,13 @@
     body{
         font-size: 1em !important;
         color: #fff;
-        background-color: #fff !important; 
+        background-color: #fff !important;
+    }
+
+    td{
+      flex: 1;
+      max-width: 100px;
+      word-wrap: break-word;
     }
 
     a{
@@ -75,8 +81,9 @@
 <table class="table table-striped">
   <thead>
     <tr class="hang">
-      <th style=" text-align: center">Mã sản phẩm</th>
-      <th scope="col">Tên sản phẩm</th>
+      <th style=" text-align: center">Loại phim</th>
+      <th scope="col">Tên phim</th>
+      <th scope="col">Năm phát hành</th>
       <th scope="col">Hình ảnh</th>
       <th scope="col">Đường dẫn</th>
     </tr>
@@ -86,6 +93,7 @@
         <tr class="hang">
           <th style=" text-align: center">{{this.select}}</th>
           <td>{{this.title}}</td>
+          <td>{{this.year}}</td>
           <td>
             <img src="{{this.image}}" alt="" class="image-product">
           </td>

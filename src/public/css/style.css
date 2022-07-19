@@ -281,7 +281,7 @@ h3{
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    width: 33.33%;
+    width: 100%;
     word-wrap: normal;
     padding: 0 16px;
     height: 80px;
@@ -302,6 +302,7 @@ h3{
     color: #FEFEFE;  
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
     font-weight: 650;
+    flex: 0 0 80%;
 }
 
 .tittle:hover{
@@ -348,6 +349,7 @@ h3{
     position: absolute;
     display: inline-flex;
     right: 24px;
+    flex: 0 0 20%;
 }
 
 .plus-btn{
@@ -392,7 +394,6 @@ h3{
 .continue-watching{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     position: relative;
     width: 100%;
@@ -466,7 +467,7 @@ h5{
 }
 
 .item-toprated{
-    width: 100%;
+    width: 100% !important;
     position: relative;
     display: flex;
     gap: 12px;
@@ -492,9 +493,11 @@ h5{
 }
 
 .movies-rated{
+    width: 100% !important;
+    margin: 0 !important;
     display: inline-flex;
-    column-gap: 24px;
     position: relative;
+    flex: 0 0 20% !important; 
 }
 
 .tittle1{
@@ -641,7 +644,9 @@ h5{
 }
 
 .embla__slide {
-    flex: 0 0 33.33%; /* Slide covers 80% of the viewport */
+    flex: 0 0 33.33%;
+    display: flex; /* Slide covers 80% of the viewport */
+    position: relative;
   }
 
 

@@ -16,16 +16,20 @@
 <div>
     <form method="POST" action="/movies/{{movies._id}}?_method=PUT">
         <div class="form-group">
-            <label for="select">Mã sản phẩm</label>
+            <label for="select">Loại phim</label>
             <input value="{{movies.select}}" class="form-control" id="select" name="select">
         </div>
         <div class="form-group">
-            <label for="name">Tên sản phẩm</label>
-            <input value="{{movies.name}}" type="text" class="form-control" id="name" name="name">
+            <label for="title">Tên phim</label>
+            <input value="{{movies.title}}" type="text" class="form-control" id="title" name="title">
         </div>
         <div class="form-group">
             <label for="description">Mô tả</label>
             <input value="{{movies.description}}" type="text" class="form-control" id="description" name="description">
+        </div>
+        <div class="form-group">
+            <label for="year">Năm phát hành</label>
+            <input value="{{movies.year}}" type="text" class="form-control" id="year" name="year">
         </div>
         <div class="form-group">
             <label for="image">Đường dẫn</label>

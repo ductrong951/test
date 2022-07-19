@@ -29,7 +29,7 @@
                 </div>
                 <ul class="embla movies-slider">
                     <div class="embla-container">
-                        {{#each movies}}
+                        {{#each_when movies "select" "1"}}
                         <li class="embla__slide movies-list">
                             <a href="/movies/{{this._id}}" class="movies-item">
                                 <img class="movies-img" src="{{this.image}}" alt="">
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                         </li>
-                        {{/each}}
+                        {{/each_when}}
                     </div>
                     <button class="button-prev embla__prev"></button>
                     <button class="button-next embla__next"></button>
@@ -100,7 +100,7 @@
                         <i class="fas fa-angle-right"></i>
                     </a>
                 </div>
-
+                
                 <div class="item-toprated">
                     <div class="movies-rated">
                         <img style="width: 220px; height: 220px; border-radius: 24px; object-positon: 60%;filter: saturate(140%) brightness(80%);" src="https://znews-photo.zadn.vn/w660/Uploaded/ngogtn/2020_11_25/Extraction_2020x.jpg" alt="">
@@ -133,144 +133,6 @@
                             </div>
                             <div class="tittle-movies1">
                                 <div class="tittle1">Mosul
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
-                        object-fit: cover;
-                        object-position: 76%;
-                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.4</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Spider-man
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
-                        object-fit: cover;
-                        object-position: 76%;
-                        filter: saturate(140%) brightness(80%);" src="https://www.themoviedb.org/t/p/w780/b09HLFIifMNljI7NI9CJgm2gN1Y.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.0</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Mission imposible
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
-                        object-fit: cover;
-                        object-position: 76%;
-                        filter: saturate(140%) brightness(80%);filter: brightness(0.8);" src="https://media.truyenhinhdulich.vn/upload/news/8795_fast_furious_phim_an_khach_nhat_tuan_qua_o_khu_vuc_09383506082019.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">8.4</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Fast and furious 9
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
-                        object-fit: cover;
-                        object-position: 76%;
-                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.4</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Spider-man
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
-                        object-fit: cover;
-                        object-position: 76%;
-                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.4</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Spider-man
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
-                        object-fit: cover;
-                        object-position: 76%;
-                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.4</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Spider-man
                                     <p>2021</p>
                                 </div>
                                 <div class="watch-btn1">

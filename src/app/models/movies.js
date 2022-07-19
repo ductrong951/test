@@ -5,7 +5,8 @@ mongoose.plugin(slug);
 
 const movies = new Schema ({
     select: { type: Number},
-    name: {type: String, maxLength: 255},
+    title: {type: String, maxLength: 255},
+    year: {type: String, maxLength: 6},
     description: { type: String, maxLength: 10000},
     rate: { type: String, maxLength: 4},
     image:{type: String},
