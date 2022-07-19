@@ -45,4 +45,5 @@ route(app);
 db.connect();
 // parse application/json
 app.use(express.json())
-app.listen(process.env.PORT || 3000);
+var port = process.env.PORT || 3000
+app.listen(port);
