@@ -1,0 +1,43 @@
+<style>
+    body{
+        padding: 96px 0 0 16px;
+        color: rgb(83, 75, 75) !important;
+        font-weight: 400;
+    }
+
+    header{
+        display: none;
+    }
+</style>
+<form method="POST" action="/movies/stored">
+    <label>Select</label>
+        <select name="select" id="select">
+        <option value="1">Phim hot</option>
+        <option value="2">Phim đang xem</option>
+        <option value="3">Phim sắp chiếu</option>
+        <option value="4">Phim hot trong tháng</option>
+    </select>
+    <div class="form-group">
+        <label for="name">Tên sản phẩm</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="description">Mô tả</label>
+        <input type="text" class="form-control" id="description" name="description">
+    </div>
+    <div class="form-group">
+        <label for="image">Hình ảnh</label>
+        <input type="text" class="form-control" id="image" name="image">
+    </div>
+     <div class="form-group">
+        <label for="url">Đường dẫn</label>
+        <input type="text" class="form-control" id="url" name="url">
+    </div>
+     <div class="form-group">
+        <label for="rate">Đánh giá</label>
+        <input type="text" class="form-control" id="rate" name="rate">
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>

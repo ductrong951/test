@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Movie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/watch-detail.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../FontAwesome.Pro.5.15.4/FontAwesome.Pro.5.15.4.Web/css/all.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+</head>
+
+<body>
+    {{>header}}
+    {{{body}}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>   
+
+    <script type="text/javascript">
+    
+        let emblaNodes = document.querySelectorAll(".embla");
+    
+        emblaNodes.forEach(function (emblaNode, i) {
+        let options = { axis: 'y' , loop: true, slidesToScroll: 1, align: 0, startIndex: 0, speed: 10 };
+        let embla = EmblaCarousel(emblaNode, options);   
+
+        let prevBtn = emblaNode.querySelector(".embla__prev");
+        let nextBtn = emblaNode.querySelector(".embla__next");
+
+        // init nav
+        let setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
+        prevBtn.addEventListener("click", embla.scrollPrev, false);
+        nextBtn.addEventListener("click", embla.scrollNext, false);
+        };
+
+        setupPrevNextBtns(prevBtn, nextBtn, embla);
+
+        let emblaNodes = document.querySelectorAll(".movies-slider");
+
+        emblaNodes.forEach(function (emblaNode, i) {
+            let options = { loop: true, slidesToScroll: 1, align: 0, startIndex: 0, speed: 10 };
+            var plugins = [EmblaCarouselAutoplay()]
+        let embla = EmblaCarousel(emblaNode, options, plugins);
+
+        //nav
+        let prevBtn = emblaNode.querySelector(".embla__prev");
+        let nextBtn = emblaNode.querySelector(".embla__next");
+
+        // init nav
+        let setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
+            prevBtn.addEventListener("click", embla.scrollPrev, false);
+            nextBtn.addEventListener("click", embla.scrollNext, false);
+        };
+        setupPrevNextBtns(prevBtn, nextBtn, embla);
+    
+    });
+
+    });
+    </script>
+
+    <script>
+        window.sr = ScrollReveal({ interval: 10, duration: 500});
+        sr.reveal('.banner-index');
+        sr.reveal('#myCarousel');
+        sr.reveal('.promo-index');
+        sr.reveal('.sales-item');
+        sr.reveal('.list-category');
+        sr.reveal('.women');
+        sr.reveal('.woman-img');
+        sr.reveal('.slider-category');
+        sr.reveal('.slider-product');
+        sr.reveal('.sweater-banner');
+        sr.reveal('.skirt');
+        sr.reveal('.new-product');
+    </script>
+
+    {{!-- Delete hidden form --}}
+
+    <form method="POST" name="form-delete"></form>
+    <script>
+        var productId;
+        var deleteform = document.forms['form-delete']
+
+        $('#delete-product').on('show.bs.modal', function(event){
+            var button = $(event.relatedTarget)
+            productId = button.data('id')
+            console.log(productId)
+        })
+
+        var btndeleteproduct = document.getElementById('btn-delete-product')
+        btndeleteproduct.onclick = function(){
+            deleteform.action = '/movies/' + productId + '?_method=DELETE'
+            deleteform.submit();
+        }
+    </script>
+</body>
+</html>

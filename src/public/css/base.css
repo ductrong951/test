@@ -1,0 +1,12 @@
+.far::before{
+    display: inline-block !important;
+}
+
+.far{
+    display: inherit !important;
+}
+
+a:focus, a:hover{
+    text-decoration: none;
+    color: rgb(219, 207, 207);
+}

@@ -1,0 +1,122 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<style>
+    body{
+        font-size: 1em !important;
+        color: #fff;
+        background-color: #fff !important; 
+    }
+
+    a{
+      font-size: 1em;
+    }
+
+    header{
+      display: none;
+    }
+
+    col{
+        padding: 12px 0 12px 8px !important;
+    }
+    .table>tbody>tr>td,.table>tbody>tr>th,
+    .table>tfoot>tr>td,.table>tfoot>tr>th,
+    .table>thead>tr>td, .table>thead>tr>th{
+        padding: 16px 0 16px 0px;
+    }
+
+    .top{
+        margin-top: 80px;
+        position: relative;
+        width: 100%;
+        height: 40px;
+    }
+
+    p{
+      color: black !important;
+    }
+    .btn-primary{
+        top: 32px;
+      right: 32px;
+      float: right;
+      padding: 8px 8px;
+      font-weight: 500;
+      font-size: 1em;
+    }
+
+    .btn-link-green{
+        color: green !important;
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+
+    .btn-link-red{
+        color: red !important;
+        font-weight: 700;
+        font-size: 1.1em;
+    }
+    .modal-content{
+      position: absolute;
+      top: 50%;
+    }
+
+    .image-product{
+      width: 200px;
+      height: 240px;
+    }
+</style>
+<div class="top">
+    <a href="/movies/create">
+        <button class="btn btn-primary"> Tạo sản phẩm</button>
+    </a>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr class="hang">
+      <th style=" text-align: center">Mã sản phẩm</th>
+      <th scope="col">Tên sản phẩm</th>
+      <th scope="col">Hình ảnh</th>
+      <th scope="col">Đường dẫn</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each movies}}
+        <tr class="hang">
+          <th style=" text-align: center">{{this.select}}</th>
+          <td>{{this.title}}</td>
+          <td>
+            <img src="{{this.image}}" alt="" class="image-product">
+          </td>
+          <td>{{this.image}}</td>
+          <td>
+            <a href="/movies/{{this._id}}/edit" type="button" class="btn btn-link-green">Sửa</a> 
+          </td>
+          <td>
+            <a type="button" class="btn btn-link-red" data-id="{{this._id}}" data-bs-toggle="modal" data-bs-target="#delete-product">Xoá</a> 
+          </td>
+        </tr>
+      {{/each}}
+  </tbody>
+</table>
+
+<div id="delete-product" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xoá sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có muốn xoá sản phẩm này?</p>
+      </div>
+      {{!-- <form method="POST" action="/product/{{main._id}}?_method=DELETE"> --}}
+        <div class="modal-footer">
+          <button style="font-size: 1em" type="button" class="btn btn-danger" data-bs-dismiss="modal">Huỷ</button>
+          <button id="btn-delete-product" style="font-size: 1em" class="btn btn-success">Đồng ý</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

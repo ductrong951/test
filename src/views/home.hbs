@@ -1,0 +1,312 @@
+<div class="index">
+    <div class="header-index">
+        <div class="header-index-left">
+            <a class="header-index-item" href="/">Movies</a>
+            <a class="header-index-item" href="#">Series</a>
+            <a class="header-index-item" href="#">TV Shows</a>
+        </div>
+        <div class="header-index-right">
+            <div class="header-index-icon icon-right">
+                <i class="far fa-signal-stream"></i>
+            </div>
+            <div class="header-index-icon icon-right">
+                <i class="far fa-bell"></i>
+            </div>
+            <div class="header-index-icon icon-right">
+                <i class="far fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="index-movies">
+            <div class="trending">
+                <div class="header-movies">
+                    <h3>Trending movies</h3>
+                    <a style="font-size: 0.9em; color: rgb(116, 111, 111);" href="">See all
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+                <ul class="embla movies-slider">
+                    <div class="embla-container">
+                        {{#each movies}}
+                        <li class="embla__slide movies-list">
+                            <a href="/movies/{{this._id}}" class="movies-item">
+                                <img class="movies-img" src="{{this.image}}" alt="">
+                            </a>
+                            <div class="tittle-movies">
+                                <div class="tittle">{{this.title}}
+                                    <p>{{this.year}}</p>
+                                </div>
+                                <div class="watch-btn">
+                                    <a style="position: relative" href="/movies/{{this._id}}">
+                                        <button class="watchnow">Watch now</button>
+                                    </a>
+                                    <div class="add-btn">
+                                        <img class="plus-btn" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </div>
+                    <button class="button-prev embla__prev"></button>
+                    <button class="button-next embla__next"></button>
+                </ul>
+            </div>    
+            <div class="item-trending">
+                <div class="header-continue">
+                    <h3>Continue watching</h3>
+                    <a style="font-size: 0.9em; color: rgb(116, 111, 111); display: flex; align-items: center;" href="">See all
+                        <i class="fas fa-angle-right"></i> 
+                    </a>
+                </div>
+                <div class="continue-item">
+                    <div class="container-item">
+                        <img class="continue-img" src="https://themillennials.life/wp-content/uploads/2021/09/The-Millennials-Life-Red-Notice-%E2%80%93-Du-an-lon-nhat-tung-thuc-hien-cua-Netflix.png" alt="">
+                        <div class="infor-continue">
+                            <p style="font-size: 1.1em; color: #fff;">Red notice</p>
+                            <h5>2021</h5>
+                            <div class="timeline-continue"></div>
+                        </div>
+                    </div>
+                    <div class="container-item">
+                        <img class="continue-img" src="https://vcdn1-giaitri.vnecdn.net/2021/09/04/RiseofBlackSwanRedNoticeSAS-16-2809-9548-1630756986.jpg?w=900&h=540&q=100&dpr=1&fit=crop&s=iVmTrV5cjR56GUdc8nToxw" alt="">
+                        <div class="infor-continue">
+                            <p style="font-size: 1.1em; color: #fff;">SAS:Red notice</p>
+                            <h5>2021</h5>
+                            <div class="timeline-continue"></div>
+                        </div>
+                    </div>
+
+                    <div class="container-item">
+                        <img class="continue-img" src="https://photo-cms-nghenhinvietnam.zadn.vn/Uploaded/trunghieu/2020_03_16/bloodshot_2_HEMJ.jpg" alt="">
+                        <div class="infor-continue">
+                            <p style="font-size: 1.1em; color: #fff;">Bloodshot</p>
+                            <h5>2021</h5>
+                            <div class="timeline-continue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="continue-watching">
+                <div class="header-rated">
+                    <h3>Top rated</h3>
+                    <div class="rate">
+                        <img style="width: 20px; height: 20px;" src="./image/star.svg" alt="">
+                    </div>
+                    <a style="font-size: 0.9em; color: rgb(116, 111, 111);" href="">See all
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+
+                <div class="item-toprated">
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px; object-positon: 60%;filter: saturate(140%) brightness(80%);" src="https://znews-photo.zadn.vn/w660/Uploaded/ngogtn/2020_11_25/Extraction_2020x.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.9</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Extraction
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px; background-image: url(https://i0.wp.com/moviesformysoul.com/wp-content/uploads/2020/12/mosul.jpg?fit=512%2C288&ssl=1);
+                        object-fit: cover;
+                        filter: saturate(140%) brightness(80%);" src="https://i0.wp.com/moviesformysoul.com/wp-content/uploads/2020/12/mosul.jpg?fit=512%2C288&ssl=1" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.1</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Mosul
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
+                        object-fit: cover;
+                        object-position: 76%;
+                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.4</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Spider-man
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
+                        object-fit: cover;
+                        object-position: 76%;
+                        filter: saturate(140%) brightness(80%);" src="https://www.themoviedb.org/t/p/w780/b09HLFIifMNljI7NI9CJgm2gN1Y.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.0</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Mission imposible
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
+                        object-fit: cover;
+                        object-position: 76%;
+                        filter: saturate(140%) brightness(80%);filter: brightness(0.8);" src="https://media.truyenhinhdulich.vn/upload/news/8795_fast_furious_phim_an_khach_nhat_tuan_qua_o_khu_vuc_09383506082019.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">8.4</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Fast and furious 9
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
+                        object-fit: cover;
+                        object-position: 76%;
+                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.4</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Spider-man
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
+                        object-fit: cover;
+                        object-position: 76%;
+                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.4</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Spider-man
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
+                        object-fit: cover;
+                        object-position: 76%;
+                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.4</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Spider-man
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movies-rated">
+                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
+                        object-fit: cover;
+                        object-position: 76%;
+                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
+                        <div class="info-toprated">
+                            <div class="box-rated">
+                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                <p style="font-size: 0.75em">7.4</p>
+                            </div>
+                            <div class="tittle-movies1">
+                                <div class="tittle1">Spider-man
+                                    <p>2021</p>
+                                </div>
+                                <div class="watch-btn1">
+                                    <button class="watchnow1">Watch now</button>
+                                    <div class="add-btn">
+                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div> 
+</div> 
