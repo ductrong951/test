@@ -2,8 +2,8 @@
     <div class="header-index">
         <div class="header-index-left">
             <a class="header-index-item" href="/">Movies</a>
-            <a class="header-index-item" href="#">Series</a>
-            <a class="header-index-item" href="#">TV Shows</a>
+            <a class="header-index-item" href="/music">Music</a>
+            <a class="header-index-item" href="/tvshow">TV Shows</a>
         </div>
         <div class="header-index-right">
             <div class="header-index-icon icon-right">
@@ -101,71 +101,32 @@
                     </a>
                 </div>
                 
-                <div class="item-toprated">
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px; object-positon: 60%;filter: saturate(140%) brightness(80%);" src="https://znews-photo.zadn.vn/w660/Uploaded/ngogtn/2020_11_25/Extraction_2020x.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.9</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Extraction
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
+                <div class="embla item-toprated">
+                    <div class="embla-container">
+                        {{#each_when movies "select" "4"}}
+                        <div class="embla__slide movies-rated">
+                            <a href="/movies/{{this._id}}">
+                                <img style="width: 220px; height: 220px; border-radius: 24px; object-positon: 60%;filter: saturate(140%) brightness(80%);" src="{{this.image}}" alt="">
+                                <div class="info-toprated">
+                                    <div class="box-rated">
+                                        <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
+                                        <p style="font-size: 0.75em">{{this.rate}}</p>
+                                    </div>
+                                    <div class="tittle-movies1">
+                                        <div class="tittle1">{{this.title}}
+                                            <p>{{this.year}}</p>
+                                        </div>
+                                        <div class="watch-btn1">
+                                            <button class="watchnow1">Watch now</button>
+                                            <div class="add-btn">
+                                            <img class="plus-btn1" src="./image/plus1.png" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px; background-image: url(https://i0.wp.com/moviesformysoul.com/wp-content/uploads/2020/12/mosul.jpg?fit=512%2C288&ssl=1);
-                        object-fit: cover;
-                        filter: saturate(140%) brightness(80%);" src="https://i0.wp.com/moviesformysoul.com/wp-content/uploads/2020/12/mosul.jpg?fit=512%2C288&ssl=1" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.1</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Mosul
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movies-rated">
-                        <img style="width: 220px; height: 220px; border-radius: 24px;background-image: url(https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg);
-                        object-fit: cover;
-                        object-position: 76%;
-                        filter: saturate(140%) brightness(80%);;" src="https://i.pinimg.com/originals/e1/97/1b/e1971b465d6fae15df46440294f08d38.jpg" alt="">
-                        <div class="info-toprated">
-                            <div class="box-rated">
-                                <img style="width: 12px; height: 12px;" src="./image/star.svg" alt="">
-                                <p style="font-size: 0.75em">7.4</p>
-                            </div>
-                            <div class="tittle-movies1">
-                                <div class="tittle1">Spider-man
-                                    <p>2021</p>
-                                </div>
-                                <div class="watch-btn1">
-                                    <button class="watchnow1">Watch now</button>
-                                    <div class="add-btn">
-                                       <img class="plus-btn1" src="./image/plus1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {{/each_when}}
                     </div>
                 </div>
             </div>

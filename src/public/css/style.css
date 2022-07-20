@@ -55,7 +55,7 @@ body{
     position: fixed;
     width: 74px;
     height: 100vh;
-    top: 64px;
+    top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,7 +258,6 @@ h3{
     position: relative;
     height: 100vh;
     top: 64px;
-
 }
 
 
@@ -471,6 +470,7 @@ h5{
     position: relative;
     display: flex;
     gap: 12px;
+    overflow: hidden;
 }
 
 .info-toprated{
@@ -501,7 +501,7 @@ h5{
 }
 
 .tittle1{
-    font-size: 1.1em;
+    font-size: 1em;
     color: #FEFEFE;  
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
     font-weight: 650;
@@ -519,11 +519,11 @@ h5{
     justify-content: space-between;
     width: 100%;
     top: 160px;
-    left: -24px;
+    left: -30px;
 }
 .watchnow1{
     width: 84px;
-    height: 36px;
+    height: 28px;
     background-color: rgba(222, 18, 25, 0.6);
     outline: none;
     border: none;

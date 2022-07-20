@@ -55,7 +55,7 @@ body{
     position: fixed;
     width: 74px;
     height: 100vh;
-    top: 64px;
+    top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;

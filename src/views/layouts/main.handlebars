@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/watch-detail.css">
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/music.css">
     <link rel="stylesheet" href="../fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="../FontAwesome.Pro.5.15.4/FontAwesome.Pro.5.15.4.Web/css/all.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/song.js"></script>
     <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
     <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
     <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
@@ -25,23 +27,6 @@
 
     <script type="text/javascript">
     
-        let emblaNodes = document.querySelectorAll(".embla");
-    
-        emblaNodes.forEach(function (emblaNode, i) {
-        let options = { axis: 'y' , loop: true, slidesToScroll: 1, align: 0, startIndex: 0, speed: 10 };
-        let embla = EmblaCarousel(emblaNode, options);   
-
-        let prevBtn = emblaNode.querySelector(".embla__prev");
-        let nextBtn = emblaNode.querySelector(".embla__next");
-
-        // init nav
-        let setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
-        prevBtn.addEventListener("click", embla.scrollPrev, false);
-        nextBtn.addEventListener("click", embla.scrollNext, false);
-        };
-
-        setupPrevNextBtns(prevBtn, nextBtn, embla);
-
         let emblaNodes = document.querySelectorAll(".movies-slider");
 
         emblaNodes.forEach(function (emblaNode, i) {
@@ -59,26 +44,48 @@
             nextBtn.addEventListener("click", embla.scrollNext, false);
         };
         setupPrevNextBtns(prevBtn, nextBtn, embla);
-    
     });
+
+        let emblaNodes1 = document.querySelectorAll(".item-toprated");
+
+        emblaNodes1.forEach(function (emblaNode, i) {
+            let options = { loop: true, slidesToScroll: 1, align: 0, startIndex: 0, speed: 10 };
+            var plugins = [EmblaCarouselAutoplay()]
+        let embla = EmblaCarousel(emblaNode, options, plugins);
+
+        //nav
+        let prevBtn = emblaNode.querySelector(".embla__prev");
+        let nextBtn = emblaNode.querySelector(".embla__next");
+
+        // init nav
+        let setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
+            prevBtn.addEventListener("click", embla.scrollPrev, false);
+            nextBtn.addEventListener("click", embla.scrollNext, false);
+        };
+        setupPrevNextBtns(prevBtn, nextBtn, embla);
+    
 });
+
+let emblaNodes2 = document.querySelectorAll(".box-related");
+
+        emblaNodes2.forEach(function (emblaNode, i) {
+            let options = { axis:'y', loop: true, slidesToScroll: 1, align:0,startIndex: 0, speed: 10 };
+            var plugins = [EmblaCarouselAutoplay()]
+        let embla = EmblaCarousel(emblaNode, options, plugins);
+
+        //nav
+        let prevBtn = emblaNode.querySelector(".embla__prev");
+        let nextBtn = emblaNode.querySelector(".embla__next");
+
+        // init nav
+        let setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
+            prevBtn.addEventListener("click", embla.scrollPrev, false);
+            nextBtn.addEventListener("click", embla.scrollNext, false);
+        };
+        setupPrevNextBtns(prevBtn, nextBtn, embla);
+    });
 </script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".item-toprated").lightSlider({
-        item: 5,
-        autoWidth: false,
-        slideMove: 1,
-        speed: 400,
-        auto: true,
-        keyPress: false,
-        controls: true,
-        prevHtml: '',
-        nextHtml: '',
-    }); 
-  });
-</script>
 
     {{!-- Delete hidden form --}}
 

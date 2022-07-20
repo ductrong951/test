@@ -9,6 +9,22 @@ class Sitecontroller{
                 movies: mutipleMongooseToObject(movies)
             })}
         )}
+
+        music(req,res,next){
+            movies.find({})
+            .then(movies => {
+                res.render('music',{
+                    movies: mutipleMongooseToObject(movies)
+                })}
+            )}
+
+        tvshow(req,res,next){
+            movies.find({})
+            .then(movies => {
+                res.render('tvshow',{
+                    movies: mutipleMongooseToObject(movies)
+                })}
+            )}
     // Get /search
     search(req,res){
         res.send('Không thể tìm kiếm')
