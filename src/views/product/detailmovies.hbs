@@ -26,7 +26,9 @@
                     </div>
                     <div class="title-date">{{movies.year}}</div>
                 </div>
-                <iframe width="800px" height="450px" class="iframe-video" src="{{movies.url}}" title="{{movies.title}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <video poster="{{movies.image}}" id="video-style" width="800" height="450" controls>
+                    <source src="{{movies.url}}" type='video/mp4'/>
+                </video>
             </div>
 
             <div class="related-watch">
@@ -56,3 +58,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const player = new Plyr('#video-style',{
+            ratio: '16:9',
+            speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] },
+            quality: { default: 1080, options: [ 1440, 1080, 720, 480, 360] }
+        });
+    // Expose player so it can be used from the console
+        window.player = player;
+    </script>
