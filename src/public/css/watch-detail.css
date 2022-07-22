@@ -4,6 +4,9 @@
     --plyr-color-main: rgb(228, 34, 206);
     --plyr-control-icon-size: 17px;
     --plyr-control-radius: 18px;
+    --plyr-font-size-base: 24px;
+    --plyr-font-size-xlarge: 32px;
+    --plyr-line-height: 1.5;
 }
 
 
