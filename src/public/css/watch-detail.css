@@ -431,3 +431,10 @@ h3{
     width: 800px;
     height: 450px;
 }
+
+.iframe-video{
+    width: 800px;
+    height: 450px;
+    border-radius: 18px;
+    overflow: hidden;
+}
