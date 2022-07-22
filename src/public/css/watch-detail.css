@@ -441,3 +441,7 @@ h3{
     border-radius: 18px;
     overflow: hidden;
 }
+
+.plyr__caption{
+    background-color: transparent !important;
+}
