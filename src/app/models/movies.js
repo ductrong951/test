@@ -11,6 +11,7 @@ const movies = new Schema ({
     rate: { type: String, maxLength: 4},
     image:{type: String},
     url: { type: String},
+    subtitle: { type: String},
     rate: { type: String, maxLength: 3},
     slug: { type: String, "slug": ['name', ' ' ,'select'], unique:'true' }
 })
