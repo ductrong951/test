@@ -4,7 +4,8 @@ const { mutipleMongooseToObject } = require('../../util/mongoose')
 class moviescontroller{
     // Get // DETAIL-PRODUCT
     detail(req,res,next){
-        movies.findOne({ _id:req.params.id  })
+        // var url = req.url.split('/').slice(-1)[0]
+        movies.findOne({_id : req.params.id})
          .then((movies) => {
             res.render('product/detailmovies', { movies: mongooseToObject(movies)})})
         .catch(next)

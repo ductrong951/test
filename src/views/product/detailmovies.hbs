@@ -26,8 +26,8 @@
                     </div>
                     <div class="title-date">{{movies.year}}</div>
                 </div>
-                <video poster="{{movies.image}}" id="video-style" width="800px" height="450px" data-setup='{}' controls>
-                    <source src="https://dl.dropboxusercontent.com/s/{{movies.url}}/" type='video/mp4'/>
+                <video poster="{{movies.image}}" id="video-style" width="800px" height="450px" controls>
+                    <source src="{{movies.url}}" type='video/mp4'/>
                     <track kind="captions" src="../subtitle/{{movies.subtitle}}" srclang="vn" label="Vietnamese" default >
                 </video>
             </div>
@@ -42,11 +42,13 @@
                         {{#each_when movies "select" "1"}}
                         <div class="embla__slide item-1">
                             <div class="image-item">
-                                <img class="image" src="{{this.image}}" alt="">
-                                <div class="info-item">
-                                    <h2 class="title-info">{{this.title}}</h2>
-                                    <h3 class="year-info">{{this.year}}</h3>
-                                </div>
+                                <a href="/movies/{{this._id}}">
+                                    <img class="image" src="{{this.image}}" alt="">
+                                    <div class="info-item">
+                                        <h2 class="title-info">{{this.title}}</h2>
+                                        <h3 class="year-info">{{this.year}}</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         {{/each_when}}
@@ -81,3 +83,4 @@
             }
         }
     </script>
+
