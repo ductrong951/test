@@ -39,19 +39,50 @@
 
                 <div class="embla box-related">
                     <div class="embla-container detail-relate-item">
-                        {{#each_when movies "select" "1"}}
                         <div class="embla__slide item-1">
                             <div class="image-item">
-                                <a href="/movies/{{this._id}}">
-                                    <img class="image" src="{{this.image}}" alt="">
+                                <a href="/movies/{{movies._id}}">
+                                    <img class="image" src="{{movies.image}}" alt="">
                                     <div class="info-item">
-                                        <h2 class="title-info">{{this.title}}</h2>
-                                        <h3 class="year-info">{{this.year}}</h3>
+                                        <h2 class="title-info">{{movies.title}}</h2>
+                                        <h3 class="year-info">{{movies.year}}</h3>
                                     </div>
                                 </a>
                             </div>
                         </div>
-                        {{/each_when}}
+                        <div class="embla__slide item-1">
+                            <div class="image-item">
+                                <a href="/movies/{{movies._id}}">
+                                    <img class="image" src="{{movies.image}}" alt="">
+                                    <div class="info-item">
+                                        <h2 class="title-info">{{movies.title}}</h2>
+                                        <h3 class="year-info">{{movies.year}}</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="embla__slide item-1">
+                            <div class="image-item">
+                                <a href="/movies/{{movies._id}}">
+                                    <img class="image" src="{{movies.image}}" alt="">
+                                    <div class="info-item">
+                                        <h2 class="title-info">{{movies.title}}</h2>
+                                        <h3 class="year-info">{{movies.year}}</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="embla__slide item-1">
+                            <div class="image-item">
+                                <a href="/movies/{{movies._id}}">
+                                    <img class="image" src="{{movies.image}}" alt="">
+                                    <div class="info-item">
+                                        <h2 class="title-info">{{movies.title}}</h2>
+                                        <h3 class="year-info">{{movies.year}}</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="button-nav">
                         <button class="detail-prev embla__prev"></button>

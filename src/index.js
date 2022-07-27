@@ -6,7 +6,6 @@ const path = require('path')
 const route = require('./routes');
 const bodyParser = require('body-parser')
 const db = require('./config/db')
-const cors = require('cors')
 const methodOverride = require('method-override')
 const helpers = require('handlebars-helpers')();
 
@@ -39,24 +38,6 @@ hbs.handlebars.registerHelper('each_when', function(list, k, v, opts) {
   return result;
 });
 
-var corsOptions = {
-  origin: 'https://zv8fk-my.sharepoint.com/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-
-var corsOptions1 = {
-  origin: 'https://dl.dropboxusercontent.com/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-
-var corsOptions2 = {
-  origin: 'https://moviesapp2608.herokuapp.com/',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-
-app.use(cors(corsOptions, corsOptions1, corsOptions2))
-  app.listen(80, function () {
-})
 
 
 // Connect DB
@@ -65,5 +46,5 @@ route(app);
 db.connect();
 // parse application/json
 app.use(express.json())
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 3000;
 app.listen(port);
