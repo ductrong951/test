@@ -27,7 +27,7 @@
                     <div class="title-date">{{movies.year}}</div>
                 </div>
                 <video poster="{{movies.image}}" id="video-style" width="800px" height="450px" controls>
-                    <source src="https://dl.dropboxusercontent.com/s/{{movies.url}}" type='video/mp4'/>
+                    <source src="https://dl.dropboxusercontent.com/s/{{movies.url}}"/>
                     <track kind="captions" src="../subtitle/{{movies.subtitle}}" srclang="vn" label="Vietnamese" default >
                 </video>
             </div>
@@ -61,26 +61,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const player = new Plyr('#video-style',{
-            ratio: '16:9',
-            speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] },
-            quality: { default: 1080, options: [ 1440, 1080, 720, 480, 360] }
-        });
-    // Expose player so it can be used from the console
-        window.player = player;
-
-        // Get all text tracks for the current player.
-        var tracks = player.textTracks();
-
-        for (var i = 0; i < tracks.length; i++) {
-            var track = tracks[i];
-
-            // Find the English captions track and mark it as "showing".
-            if (track.kind === 'captions' && track.language === 'en') {
-                track.mode = 'showing';
-            }
-        }
-    </script>
 

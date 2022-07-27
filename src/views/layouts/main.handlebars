@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/watch-detail.css">
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/music.css">
+    {{!-- <link rel="stylesheet" href="../css/music.css"> --}}
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css"/>
     <link rel="stylesheet" href="../fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="../FontAwesome.Pro.5.15.4/FontAwesome.Pro.5.15.4.Web/css/all.min.css">
@@ -29,7 +29,7 @@
         let emblaNodes = document.querySelectorAll(".movies-slider");
 
         emblaNodes.forEach(function (emblaNode, i) {
-            let options = { loop: true, slidesToScroll: 1, align: 0, startIndex: 0, speed: 10 };
+            let options = { loop: true, slidesToScroll: 1, align: 0, startIndex: 0, speed: 8 };
             var plugins = [EmblaCarouselAutoplay()]
         let embla = EmblaCarousel(emblaNode, options, plugins);
 
@@ -48,7 +48,7 @@
         let emblaNodes1 = document.querySelectorAll(".item-toprated");
 
         emblaNodes1.forEach(function (emblaNode, i) {
-            let options = { loop: true, slidesToScroll: 1, align: 0, startIndex: 0, speed: 10 };
+            let options = { loop: true, slidesToScroll: 2, align: 0, startIndex: 0, speed: 8 };
             var plugins = [EmblaCarouselAutoplay()]
         let embla = EmblaCarousel(emblaNode, options, plugins);
 
@@ -103,6 +103,16 @@ let emblaNodes2 = document.querySelectorAll(".box-related");
             deleteform.action = '/movies/' + productId + '?_method=DELETE'
             deleteform.submit();
         }
+    </script>
+
+    <script>
+        const player = new Plyr('#video-style',{
+            speed: { selected: 1, options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2] },
+            quality: { default: 1080, options: [ 1440, 1080, 720, 480, 360] }
+        });
+    // Expose player so it can be used from the console
+        window.player = player;
+
     </script>
 </body>
 </html>
