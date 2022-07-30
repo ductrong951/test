@@ -25,6 +25,17 @@ class Sitecontroller{
                     movies: mutipleMongooseToObject(movies)
                 })}
             )}
+
+        //? UPLOAD VIDEO
+
+        upload(req,res,next){
+            movies.find({})
+            .then(movies => {
+                res.render('product/upload',{
+                    movies: mutipleMongooseToObject(movies)
+                })}
+            )}
+
     // Get /search
     search(req,res){
         res.send('Không thể tìm kiếm')

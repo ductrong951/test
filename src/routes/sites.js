@@ -5,5 +5,6 @@ const Sitecontroller = require('../app/controllers/Sitecontroller')
 router.get('/', Sitecontroller.index)
 router.get('/music', Sitecontroller.music)
 router.get('/tvshow', Sitecontroller.tvshow)
+router.get('/upload', Sitecontroller.upload)
 router.get('/search', Sitecontroller.search)
 module.exports = router;
